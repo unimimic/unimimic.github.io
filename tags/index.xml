@@ -3,5 +3,29 @@
         <title>Tags - Tag - My New Hugo Site</title>
         <link>https://unimimic.github.io/tags/</link>
         <description>Tags - Tag - My New Hugo Site</description>
-        <generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://unimimic.github.io/tags/" rel="self" type="application/rss+xml" /></channel>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 19 Apr 2019 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://unimimic.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Hugo</title>
+    <link>https://unimimic.github.io/tags/hugo/</link>
+    <pubDate>Fri, 19 Apr 2019 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://unimimic.github.io/tags/hugo/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>教學</title>
+    <link>https://unimimic.github.io/tags/%E6%95%99%E5%AD%B8/</link>
+    <pubDate>Fri, 19 Apr 2019 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://unimimic.github.io/tags/%E6%95%99%E5%AD%B8/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>部落格</title>
+    <link>https://unimimic.github.io/tags/%E9%83%A8%E8%90%BD%E6%A0%BC/</link>
+    <pubDate>Fri, 19 Apr 2019 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://unimimic.github.io/tags/%E9%83%A8%E8%90%BD%E6%A0%BC/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
 </rss>

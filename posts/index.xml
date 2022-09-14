@@ -3,21 +3,22 @@
         <title>All Posts - My New Hugo Site</title>
         <link>https://unimimic.github.io/posts/</link>
         <description>All Posts | My New Hugo Site</description>
-        <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 07 Aug 2022 12:08:27 &#43;0800</lastBuildDate><atom:link href="https://unimimic.github.io/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>My First Post</title>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 19 Apr 2019 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://unimimic.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Hugo 建立部落格</title>
     <link>https://unimimic.github.io/posts/my-first-post/</link>
-    <pubDate>Sun, 07 Aug 2022 12:08:27 &#43;0800</pubDate>
-    <author>Author</author>
+    <pubDate>Fri, 19 Apr 2019 00:00:00 &#43;0000</pubDate>
+    <author>bunny</author>
     <guid>https://unimimic.github.io/posts/my-first-post/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>test</title>
-    <link>https://unimimic.github.io/posts/test/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>https://unimimic.github.io/posts/test/</guid>
-    <description><![CDATA[]]></description>
+    <description><![CDATA[Hosting on Local 安裝 Hugo
+brew install hugo 啟動新專案
+hugo new site quickstart 添加主題
+cd quickstart git init git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt 設定主題
+echo theme = \&#34;LoveIt\&#34; &gt;&gt; config.toml 新增貼文
+hugo new posts/my-first-post.md 啟動 Hugo 服務器
+hugo -D hugo server -D Hosting on GitHub Pages 手動部署 Hugo 目標：把建構出來的檔案push到&lt;your-account&gt;.github.io 儲存庫。
+在github建立你的 &lt;your-account&gt;.github.io儲存庫。
+透過git push public底下檔案到&lt;your-account&gt;.github.io 儲存庫。
+hugo cd public git remote add origin https://github.com/&lt;your-account&gt;/&lt;your-account&gt;.github.io git add . git commit -m &#34;push public&#34; git push -u origin master 自動化部署 Hugo 目標：更新repo → 產生靜態網站 → 將.]]></description>
 </item>
 </channel>
 </rss>
