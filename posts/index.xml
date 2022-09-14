@@ -20,5 +20,13 @@ hugo -D hugo server -D Hosting on GitHub Pages 手動部署 Hugo 目標：把建
 透過git push public底下檔案到&lt;your-account&gt;.github.io 儲存庫。
 hugo cd public git remote add origin https://github.com/&lt;your-account&gt;/&lt;your-account&gt;.github.io git add . git commit -m &#34;push public&#34; git push -u origin master 自動化部署 Hugo 目標：更新repo → 產生靜態網站 → 將.]]></description>
 </item>
+<item>
+    <title>Hello World</title>
+    <link>https://unimimic.github.io/posts/my-first/</link>
+    <pubDate>Fri, 06 Jul 2018 16:00:21 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://unimimic.github.io/posts/my-first/</guid>
+    <description><![CDATA[Hello World. Post example]]></description>
+</item>
 </channel>
 </rss>
