@@ -1,15 +1,20 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Blog - Category - My New Hugo Site</title>
-        <link>https://unimimic.github.io/categories/blog/</link>
-        <description>Blog - Category - My New Hugo Site</description>
-        <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 06 Jul 2018 16:00:21 &#43;0800</lastBuildDate><atom:link href="https://unimimic.github.io/categories/blog/" rel="self" type="application/rss+xml" /><item>
-    <title>Hello World</title>
-    <link>https://unimimic.github.io/posts/my-first/</link>
-    <pubDate>Fri, 06 Jul 2018 16:00:21 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://unimimic.github.io/posts/my-first/</guid>
-    <description><![CDATA[Hello World. Post example]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on My New Hugo Site</title>
+    <link>https://unimimic.github.io/categories/blog/</link>
+    <description>Recent content in Blog on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Jul 2018 16:00:21 +0800</lastBuildDate><atom:link href="https://unimimic.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World</title>
+      <link>https://unimimic.github.io/posts/my-first/</link>
+      <pubDate>Fri, 06 Jul 2018 16:00:21 +0800</pubDate>
+      
+      <guid>https://unimimic.github.io/posts/my-first/</guid>
+      <description>Hello World. Post example</description>
+    </item>
+    
+  </channel>
 </rss>

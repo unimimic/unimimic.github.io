@@ -4,55 +4,39 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Hugo 建立部落格 - My New Hugo Site</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="Hugo 建立部落格" />
-<meta property="og:description" content="Hosting on Local 安裝 Hugo
-brew install hugo 啟動新專案
-hugo new site quickstart 添加主題
-cd quickstart git init git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt 設定主題
-echo theme = \&#34;LoveIt\&#34; &gt;&gt; config.toml 新增貼文
-hugo new posts/my-first-post.md 啟動 Hugo 服務器
-hugo -D hugo server -D Hosting on GitHub Pages 手動部署 Hugo 目標：把建構出來的檔案push到&lt;your-account&gt;.github.io 儲存庫。
-在github建立你的 &lt;your-account&gt;.github.io儲存庫。
-透過git push public底下檔案到&lt;your-account&gt;.github.io 儲存庫。
-hugo cd public git remote add origin https://github.com/&lt;your-account&gt;/&lt;your-account&gt;.github.io git add . git commit -m &#34;push public&#34; git push -u origin master 自動化部署 Hugo 目標：更新repo → 產生靜態網站 → 將." />
+        <title>使用 Hugo 建立免費部落格 - IT Bunny Lee</title><meta name="Description" content="asdasdasdas"><meta property="og:title" content="使用 Hugo 建立免費部落格" />
+<meta property="og:description" content="asdasdasdas" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://unimimic.github.io/posts/my-first-post/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2019-04-19T00:00:00+00:00" />
-<meta property="article:modified_time" content="2019-04-19T00:00:00+00:00" /><meta property="og:site_name" content="My cool site" />
+<meta property="og:url" content="https://unimimic.github.io/posts/hugo-blog/" /><meta property="og:image" content="https://unimimic.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-14T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-09-14T00:00:00+00:00" /><meta property="og:site_name" content="IT 李小兔" />
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Hugo 建立部落格"/>
-<meta name="twitter:description" content="Hosting on Local 安裝 Hugo
-brew install hugo 啟動新專案
-hugo new site quickstart 添加主題
-cd quickstart git init git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt 設定主題
-echo theme = \&#34;LoveIt\&#34; &gt;&gt; config.toml 新增貼文
-hugo new posts/my-first-post.md 啟動 Hugo 服務器
-hugo -D hugo server -D Hosting on GitHub Pages 手動部署 Hugo 目標：把建構出來的檔案push到&lt;your-account&gt;.github.io 儲存庫。
-在github建立你的 &lt;your-account&gt;.github.io儲存庫。
-透過git push public底下檔案到&lt;your-account&gt;.github.io 儲存庫。
-hugo cd public git remote add origin https://github.com/&lt;your-account&gt;/&lt;your-account&gt;.github.io git add . git commit -m &#34;push public&#34; git push -u origin master 自動化部署 Hugo 目標：更新repo → 產生靜態網站 → 將."/>
-<meta name="application-name" content="My cool site">
-<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://unimimic.github.io/logo.png"/>
+
+<meta name="twitter:title" content="使用 Hugo 建立免費部落格"/>
+<meta name="twitter:description" content="asdasdasdas"/>
+<meta name="application-name" content="我的网站">
+<meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://unimimic.github.io/posts/my-first-post/" /><link rel="prev" href="https://unimimic.github.io/posts/my-first/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://unimimic.github.io/posts/hugo-blog/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Hugo 建立部落格",
+        "headline": "使用 Hugo 建立免費部落格",
         "inLanguage": "en-us",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/unimimic.github.io\/posts\/my-first-post\/"
+            "@id": "https:\/\/unimimic.github.io\/posts\/hugo-blog\/"
         },"genre": "posts","keywords": "教學, Hugo, 部落格","wordcount":  191 ,
-        "url": "https:\/\/unimimic.github.io\/posts\/my-first-post\/","datePublished": "2019-04-19T00:00:00+00:00","dateModified": "2019-04-19T00:00:00+00:00","publisher": {
+        "url": "https:\/\/unimimic.github.io\/posts\/hugo-blog\/","datePublished": "2022-09-14T00:00:00+00:00","dateModified": "2022-09-14T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
-                "name": "bunny"
-            },"description": ""
+                "name": "IT Bunny"
+            },"description": "asdasdasdas"
     }
     </script></head>
     <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
@@ -60,10 +44,10 @@ hugo cd public git remote add origin https://github.com/&lt;your-account&gt;/&lt
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="My New Hugo Site">My cool site</a>
+            <a href="/" title="IT Bunny Lee"><span class="header-title-pre"><i class='fa-solid fa-carrot' aria-hidden='true'></i> </span>IT 李小兔</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 標籤 </a><a class="menu-item" href="/categories/"> 分類 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
                 </a></div>
         </div>
@@ -72,13 +56,13 @@ hugo cd public git remote add origin https://github.com/&lt;your-account&gt;/&lt
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="My New Hugo Site">My cool site</a>
+                <a href="/" title="IT Bunny Lee"><span class="header-title-pre"><i class='fa-solid fa-carrot' aria-hidden='true'></i> </span>IT 李小兔</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
             </div>
         </div>
-        <div class="menu" id="menu-mobile"><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">標籤</a><a class="menu-item" href="/categories/" title="">分類</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a></div>
     </div>
@@ -86,9 +70,9 @@ hugo cd public git remote add origin https://github.com/&lt;your-account&gt;/&lt
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Hugo 建立部落格</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>bunny</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%E6%8A%80%E8%A1%93%E7%AD%86%E8%A8%98/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>技術筆記</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2019-04-19">2019-04-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;191 words&nbsp;
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">使用 Hugo 建立免費部落格</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>IT Bunny</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%E6%8A%80%E8%A1%93%E7%AD%86%E8%A8%98/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>技術筆記</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-14">2022-09-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;191 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -196,17 +180,16 @@ hugo cd public git remote add origin https://github.com/&lt;your-account&gt;/&lt
 </span></span><span style="display:flex;"><span>          <span style="color:#f92672">publish_dir</span>: <span style="color:#ae81ff">./public</span>
 </span></span><span style="display:flex;"><span>          <span style="color:#f92672">publish_branch</span>: <span style="color:#ae81ff">master</span>
 </span></span></code></pre></div></li>
-</ol>
-</div><div class="post-footer" id="post-footer">
+</ol></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2019-04-19</span>
+                <span>Updated on 2022-09-14</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://unimimic.github.io/posts/my-first-post/" data-title="Hugo 建立部落格" data-hashtags="教學,Hugo,部落格"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://unimimic.github.io/posts/my-first-post/" data-hashtag="教學"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://unimimic.github.io/posts/my-first-post/" data-title="Hugo 建立部落格"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://unimimic.github.io/posts/my-first-post/" data-title="Hugo 建立部落格"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://unimimic.github.io/posts/my-first-post/" data-title="Hugo 建立部落格"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://unimimic.github.io/posts/hugo-blog/" data-hashtag="教學"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://unimimic.github.io/posts/hugo-blog/" data-title="使用 Hugo 建立免費部落格"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://unimimic.github.io/posts/hugo-blog/" data-title="使用 Hugo 建立免費部落格"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Blogger" data-sharer="blogger" data-url="https://unimimic.github.io/posts/hugo-blog/" data-title="使用 Hugo 建立免費部落格" data-description="asdasdasdas"><i class="fab fa-blogger fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Evernote" data-sharer="evernote" data-url="https://unimimic.github.io/posts/hugo-blog/" data-title="使用 Hugo 建立免費部落格"><i class="fab fa-evernote fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Trello" data-sharer="trello" data-url="https://unimimic.github.io/posts/hugo-blog/" data-title="使用 Hugo 建立免費部落格" data-description="asdasdasdas"><i class="fab fa-trello fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -218,12 +201,11 @@ hugo cd public git remote add origin https://github.com/&lt;your-account&gt;/&lt
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/my-first/" class="prev" rel="prev" title="Hello World"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Hello World</a></div>
+    <div class="post-nav"></div>
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.102.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">IT Bunny</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 

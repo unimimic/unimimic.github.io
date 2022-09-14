@@ -1,24 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>部落格 - Tag - My New Hugo Site</title>
+        <title>部落格 - Tag - IT Bunny Lee</title>
         <link>https://unimimic.github.io/tags/%E9%83%A8%E8%90%BD%E6%A0%BC/</link>
-        <description>部落格 - Tag - My New Hugo Site</description>
-        <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 19 Apr 2019 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://unimimic.github.io/tags/%E9%83%A8%E8%90%BD%E6%A0%BC/" rel="self" type="application/rss+xml" /><item>
-    <title>Hugo 建立部落格</title>
-    <link>https://unimimic.github.io/posts/my-first-post/</link>
-    <pubDate>Fri, 19 Apr 2019 00:00:00 &#43;0000</pubDate>
-    <author>bunny</author>
-    <guid>https://unimimic.github.io/posts/my-first-post/</guid>
-    <description><![CDATA[Hosting on Local 安裝 Hugo
-brew install hugo 啟動新專案
-hugo new site quickstart 添加主題
-cd quickstart git init git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt 設定主題
-echo theme = \&#34;LoveIt\&#34; &gt;&gt; config.toml 新增貼文
-hugo new posts/my-first-post.md 啟動 Hugo 服務器
-hugo -D hugo server -D Hosting on GitHub Pages 手動部署 Hugo 目標：把建構出來的檔案push到&lt;your-account&gt;.github.io 儲存庫。
-在github建立你的 &lt;your-account&gt;.github.io儲存庫。
-透過git push public底下檔案到&lt;your-account&gt;.github.io 儲存庫。
-hugo cd public git remote add origin https://github.com/&lt;your-account&gt;/&lt;your-account&gt;.github.io git add . git commit -m &#34;push public&#34; git push -u origin master 自動化部署 Hugo 目標：更新repo → 產生靜態網站 → 將.]]></description>
+        <description>部落格 - Tag - IT Bunny Lee</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 14 Sep 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://unimimic.github.io/tags/%E9%83%A8%E8%90%BD%E6%A0%BC/" rel="self" type="application/rss+xml" /><item>
+    <title>使用 Hugo 建立免費部落格</title>
+    <link>https://unimimic.github.io/posts/hugo-blog/</link>
+    <pubDate>Wed, 14 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>IT Bunny</author>
+    <guid>https://unimimic.github.io/posts/hugo-blog/</guid>
+    <description><![CDATA[asdasdasdas]]></description>
 </item>
 </channel>
 </rss>
