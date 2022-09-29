@@ -9,7 +9,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://unimimic.github.io/posts/install-cuda-cudnn-win10/" /><meta property="og:image" content="https://unimimic.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-09-29T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-09-29T21:31:47+08:00" /><meta property="og:site_name" content="IT 李小兔" />
+<meta property="article:modified_time" content="2022-09-29T21:35:16+08:00" /><meta property="og:site_name" content="IT 李小兔" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://unimimic.github.io/logo.png"/>
@@ -31,7 +31,7 @@
             "@type": "WebPage",
             "@id": "https:\/\/unimimic.github.io\/posts\/install-cuda-cudnn-win10\/"
         },"genre": "posts","keywords": "教學, Cuda, cuDNN, 免費, windows","wordcount":  73 ,
-        "url": "https:\/\/unimimic.github.io\/posts\/install-cuda-cudnn-win10\/","datePublished": "2022-09-29T00:00:00+00:00","dateModified": "2022-09-29T21:31:47+08:00","publisher": {
+        "url": "https:\/\/unimimic.github.io\/posts\/install-cuda-cudnn-win10\/","datePublished": "2022-09-29T00:00:00+00:00","dateModified": "2022-09-29T21:35:16+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -81,7 +81,8 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#-說明">⏩ 說明</a></li>
+    <li><a href="#-下載cuda和cudnn">⏩ 下載CUDA和cuDNN</a>
       <ul>
         <li><a href="#查詢顯卡最高支援的-cuda-版本">📌查詢顯卡最高支援的 CUDA 版本</a></li>
         <li><a href="#確認是否要更新驅動">📌確認是否要更新驅動</a></li>
@@ -99,30 +100,27 @@
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="-說明">⏩ 說明</h1>
+            </div><div class="content" id="content"><h2 id="-說明">⏩ 說明</h2>
 <ul>
 <li>CUDA 是 Nvidia 專用於平行化運算的框架。</li>
 <li>cuDNN（CUDA Deep Neural Network Library）是CUDA 深度學習的函式庫。</li>
 <li>以下以 GeForce RTX 2080 SUPER 示範安裝CUDA和cuDNN。</li>
 </ul>
-<h1 id="-下載cuda和cudnn">⏩ 下載CUDA和cuDNN</h1>
-<hr>
+<h2 id="-下載cuda和cudnn">⏩ 下載CUDA和cuDNN</h2>
 <blockquote>
 <p>如果是要用於 TensorFlow。請先參閱 CUDA® 和 CuDNN 版本經過測試的建構設定。</p>
 </blockquote>
 <h3 id="查詢顯卡最高支援的-cuda-版本">📌查詢顯卡最高支援的 CUDA 版本</h3>
 <ul>
-<li>
-<p><code>桌面右鍵 -&gt; NVIDIA 控制面板 -&gt; 左下角的系統資訊 -&gt; 元素</code>。以<code>GeForce RTX 2080 SUPER</code>為例，最高支援10.1.120版本的cuda。</p>
-<p><img
+<li><code>桌面右鍵 -&gt; NVIDIA 控制面板 -&gt; 左下角的系統資訊 -&gt; 元素</code>。以<code>GeForce RTX 2080 SUPER</code>為例，最高支援10.1.120版本的cuda。
+<img
         class="lazyload"
         src="/svg/loading.min.svg"
         data-src="/posts/install-cuda-cudnn-win10/Windows%E5%AE%89%E8%A3%9DCUDA%E5%92%8CcuDNN%20ca5148b246b6468cacb98a11c0f93fa0/Untitled.png"
         data-srcset="/posts/install-cuda-cudnn-win10/Windows%E5%AE%89%E8%A3%9DCUDA%E5%92%8CcuDNN%20ca5148b246b6468cacb98a11c0f93fa0/Untitled.png, /posts/install-cuda-cudnn-win10/Windows%E5%AE%89%E8%A3%9DCUDA%E5%92%8CcuDNN%20ca5148b246b6468cacb98a11c0f93fa0/Untitled.png 1.5x, /posts/install-cuda-cudnn-win10/Windows%E5%AE%89%E8%A3%9DCUDA%E5%92%8CcuDNN%20ca5148b246b6468cacb98a11c0f93fa0/Untitled.png 2x"
         data-sizes="auto"
         alt="/posts/install-cuda-cudnn-win10/Windows%E5%AE%89%E8%A3%9DCUDA%E5%92%8CcuDNN%20ca5148b246b6468cacb98a11c0f93fa0/Untitled.png"
-        title="Untitled.png" width="958" height="709" /></p>
-</li>
+        title="Untitled.png" width="958" height="709" /></li>
 </ul>
 <h3 id="確認是否要更新驅動">📌確認是否要更新驅動</h3>
 <ul>
