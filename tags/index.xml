@@ -3,20 +3,52 @@
         <title>Tags - Tag - IT Bunny Lee</title>
         <link>https://unimimic.github.io/tags/</link>
         <description>Tags - Tag - IT Bunny Lee</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 14 Sep 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://unimimic.github.io/tags/" rel="self" type="application/rss+xml" /><item>
-    <title>Hugo</title>
-    <link>https://unimimic.github.io/tags/hugo/</link>
-    <pubDate>Wed, 14 Sep 2022 00:00:00 &#43;0000</pubDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 29 Sep 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://unimimic.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Cuda</title>
+    <link>https://unimimic.github.io/tags/cuda/</link>
+    <pubDate>Thu, 29 Sep 2022 00:00:00 &#43;0000</pubDate>
     <author>Bunny Lee</author>
-    <guid>https://unimimic.github.io/tags/hugo/</guid>
+    <guid>https://unimimic.github.io/tags/cuda/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>cuDNN</title>
+    <link>https://unimimic.github.io/tags/cudnn/</link>
+    <pubDate>Thu, 29 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>Bunny Lee</author>
+    <guid>https://unimimic.github.io/tags/cudnn/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>windows</title>
+    <link>https://unimimic.github.io/tags/windows/</link>
+    <pubDate>Thu, 29 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>Bunny Lee</author>
+    <guid>https://unimimic.github.io/tags/windows/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>免費</title>
+    <link>https://unimimic.github.io/tags/%E5%85%8D%E8%B2%BB/</link>
+    <pubDate>Thu, 29 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>Bunny Lee</author>
+    <guid>https://unimimic.github.io/tags/%E5%85%8D%E8%B2%BB/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>教學</title>
     <link>https://unimimic.github.io/tags/%E6%95%99%E5%AD%B8/</link>
-    <pubDate>Wed, 14 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <pubDate>Thu, 29 Sep 2022 00:00:00 &#43;0000</pubDate>
     <author>Bunny Lee</author>
     <guid>https://unimimic.github.io/tags/%E6%95%99%E5%AD%B8/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Hugo</title>
+    <link>https://unimimic.github.io/tags/hugo/</link>
+    <pubDate>Wed, 14 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>Bunny Lee</author>
+    <guid>https://unimimic.github.io/tags/hugo/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
