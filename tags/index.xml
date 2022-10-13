@@ -3,7 +3,23 @@
         <title>Tags - Tag - IT Bunny Lee</title>
         <link>https://unimimic.github.io/tags/</link>
         <description>Tags - Tag - IT Bunny Lee</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 29 Sep 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://unimimic.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 13 Oct 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://unimimic.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Python</title>
+    <link>https://unimimic.github.io/tags/python/</link>
+    <pubDate>Thu, 13 Oct 2022 00:00:00 &#43;0000</pubDate>
+    <author>Bunny Lee</author>
+    <guid>https://unimimic.github.io/tags/python/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>教學</title>
+    <link>https://unimimic.github.io/tags/%E6%95%99%E5%AD%B8/</link>
+    <pubDate>Thu, 13 Oct 2022 00:00:00 &#43;0000</pubDate>
+    <author>Bunny Lee</author>
+    <guid>https://unimimic.github.io/tags/%E6%95%99%E5%AD%B8/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>Cuda</title>
     <link>https://unimimic.github.io/tags/cuda/</link>
     <pubDate>Thu, 29 Sep 2022 00:00:00 &#43;0000</pubDate>
@@ -33,14 +49,6 @@
     <pubDate>Thu, 29 Sep 2022 00:00:00 &#43;0000</pubDate>
     <author>Bunny Lee</author>
     <guid>https://unimimic.github.io/tags/%E5%85%8D%E8%B2%BB/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>教學</title>
-    <link>https://unimimic.github.io/tags/%E6%95%99%E5%AD%B8/</link>
-    <pubDate>Thu, 29 Sep 2022 00:00:00 &#43;0000</pubDate>
-    <author>Bunny Lee</author>
-    <guid>https://unimimic.github.io/tags/%E6%95%99%E5%AD%B8/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
