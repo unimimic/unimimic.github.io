@@ -4,6 +4,14 @@
         <link>https://unimimic.github.io/tags/%E6%95%99%E5%AD%B8/</link>
         <description>教學 - Tag - IT Bunny Lee</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 29 Dec 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://unimimic.github.io/tags/%E6%95%99%E5%AD%B8/" rel="self" type="application/rss+xml" /><item>
+    <title>使用 InstallForge 快速製作安裝包</title>
+    <link>https://unimimic.github.io/posts/installforge-start/</link>
+    <pubDate>Thu, 29 Dec 2022 00:00:00 &#43;0000</pubDate>
+    <author>Bunny Lee</author>
+    <guid>https://unimimic.github.io/posts/installforge-start/</guid>
+    <description><![CDATA[展示如何使用 InstallForge 快速製作安裝包]]></description>
+</item>
+<item>
     <title>使用 python 和快速製作LINE Notify</title>
     <link>https://unimimic.github.io/posts/line-notify/</link>
     <pubDate>Thu, 29 Dec 2022 00:00:00 &#43;0000</pubDate>

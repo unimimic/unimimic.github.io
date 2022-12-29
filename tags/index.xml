@@ -20,14 +20,6 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>“快速&#34;</title>
-    <link>https://unimimic.github.io/tags/%E5%BF%AB%E9%80%9F/</link>
-    <pubDate>Thu, 29 Dec 2022 00:00:00 &#43;0000</pubDate>
-    <author>Bunny Lee</author>
-    <guid>https://unimimic.github.io/tags/%E5%BF%AB%E9%80%9F/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
     <title>“推播&#34;</title>
     <link>https://unimimic.github.io/tags/%E6%8E%A8%E6%92%AD/</link>
     <pubDate>Thu, 29 Dec 2022 00:00:00 &#43;0000</pubDate>
@@ -36,11 +28,27 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
+    <title>InstallForge</title>
+    <link>https://unimimic.github.io/tags/installforge/</link>
+    <pubDate>Thu, 29 Dec 2022 00:00:00 &#43;0000</pubDate>
+    <author>Bunny Lee</author>
+    <guid>https://unimimic.github.io/tags/installforge/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>python</title>
     <link>https://unimimic.github.io/tags/python/</link>
     <pubDate>Thu, 29 Dec 2022 00:00:00 &#43;0000</pubDate>
     <author>Bunny Lee</author>
     <guid>https://unimimic.github.io/tags/python/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>快速</title>
+    <link>https://unimimic.github.io/tags/%E5%BF%AB%E9%80%9F/</link>
+    <pubDate>Thu, 29 Dec 2022 00:00:00 &#43;0000</pubDate>
+    <author>Bunny Lee</author>
+    <guid>https://unimimic.github.io/tags/%E5%BF%AB%E9%80%9F/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
@@ -73,14 +81,6 @@
     <pubDate>Thu, 29 Sep 2022 00:00:00 &#43;0000</pubDate>
     <author>Bunny Lee</author>
     <guid>https://unimimic.github.io/tags/windows/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>免費</title>
-    <link>https://unimimic.github.io/tags/%E5%85%8D%E8%B2%BB/</link>
-    <pubDate>Thu, 29 Sep 2022 00:00:00 &#43;0000</pubDate>
-    <author>Bunny Lee</author>
-    <guid>https://unimimic.github.io/tags/%E5%85%8D%E8%B2%BB/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
