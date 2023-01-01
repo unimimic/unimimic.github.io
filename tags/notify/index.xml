@@ -1,15 +1,1 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Notify - Tag - IT Bunny Lee</title>
-        <link>https://unimimic.github.io/tags/notify/</link>
-        <description>Notify - Tag - IT Bunny Lee</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 29 Dec 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://unimimic.github.io/tags/notify/" rel="self" type="application/rss+xml" /><item>
-    <title>使用 python 和快速製作LINE Notify</title>
-    <link>https://unimimic.github.io/posts/line-notify/</link>
-    <pubDate>Thu, 29 Dec 2022 00:00:00 &#43;0000</pubDate>
-    <author>Bunny Lee</author>
-    <guid>https://unimimic.github.io/posts/line-notify/</guid>
-    <description><![CDATA[展示如何使用python製作推播通知]]></description>
-</item>
-</channel>
-</rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Notify - Tag - IT Bunny Lee</title><link>https://unimimic.github.io/tags/notify/</link><description>Notify - Tag - IT Bunny Lee</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 29 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://unimimic.github.io/tags/notify/" rel="self" type="application/rss+xml"/><item><title>使用 python 和快速製作LINE Notify</title><link>https://unimimic.github.io/posts/line-notify/</link><pubDate>Thu, 29 Dec 2022 00:00:00 +0000</pubDate><author>Bunny Lee</author><guid>https://unimimic.github.io/posts/line-notify/</guid><description>展示如何使用python製作推播通知</description></item></channel></rss>

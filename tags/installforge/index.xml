@@ -1,15 +1,1 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>InstallForge - Tag - IT Bunny Lee</title>
-        <link>https://unimimic.github.io/tags/installforge/</link>
-        <description>InstallForge - Tag - IT Bunny Lee</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 29 Dec 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://unimimic.github.io/tags/installforge/" rel="self" type="application/rss+xml" /><item>
-    <title>使用 InstallForge 快速製作安裝包</title>
-    <link>https://unimimic.github.io/posts/installforge-start/</link>
-    <pubDate>Thu, 29 Dec 2022 00:00:00 &#43;0000</pubDate>
-    <author>Bunny Lee</author>
-    <guid>https://unimimic.github.io/posts/installforge-start/</guid>
-    <description><![CDATA[展示如何使用 InstallForge 快速製作安裝包]]></description>
-</item>
-</channel>
-</rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>InstallForge - Tag - IT Bunny Lee</title><link>https://unimimic.github.io/tags/installforge/</link><description>InstallForge - Tag - IT Bunny Lee</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 29 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://unimimic.github.io/tags/installforge/" rel="self" type="application/rss+xml"/><item><title>使用 InstallForge 快速製作安裝包</title><link>https://unimimic.github.io/posts/installforge-start/</link><pubDate>Thu, 29 Dec 2022 00:00:00 +0000</pubDate><author>Bunny Lee</author><guid>https://unimimic.github.io/posts/installforge-start/</guid><description>展示如何使用 InstallForge 快速製作安裝包</description></item></channel></rss>

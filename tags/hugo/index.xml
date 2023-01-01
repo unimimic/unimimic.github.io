@@ -1,15 +1,1 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Hugo - Tag - IT Bunny Lee</title>
-        <link>https://unimimic.github.io/tags/hugo/</link>
-        <description>Hugo - Tag - IT Bunny Lee</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 14 Sep 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://unimimic.github.io/tags/hugo/" rel="self" type="application/rss+xml" /><item>
-    <title>使用 Hugo 建立免費部落格</title>
-    <link>https://unimimic.github.io/posts/hugo-blog/</link>
-    <pubDate>Wed, 14 Sep 2022 00:00:00 &#43;0000</pubDate>
-    <author>Bunny Lee</author>
-    <guid>https://unimimic.github.io/posts/hugo-blog/</guid>
-    <description><![CDATA[展示如何使用Hugo建立免費部落格]]></description>
-</item>
-</channel>
-</rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Hugo - Tag - IT Bunny Lee</title><link>https://unimimic.github.io/tags/hugo/</link><description>Hugo - Tag - IT Bunny Lee</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 14 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://unimimic.github.io/tags/hugo/" rel="self" type="application/rss+xml"/><item><title>使用 Hugo 建立免費部落格</title><link>https://unimimic.github.io/posts/hugo-blog/</link><pubDate>Wed, 14 Sep 2022 00:00:00 +0000</pubDate><author>Bunny Lee</author><guid>https://unimimic.github.io/posts/hugo-blog/</guid><description>展示如何使用Hugo建立免費部落格</description></item></channel></rss>

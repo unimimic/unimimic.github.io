@@ -1,15 +1,1 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>免費 - Tag - IT Bunny Lee</title>
-        <link>https://unimimic.github.io/tags/%E5%85%8D%E8%B2%BB/</link>
-        <description>免費 - Tag - IT Bunny Lee</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 29 Sep 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://unimimic.github.io/tags/%E5%85%8D%E8%B2%BB/" rel="self" type="application/rss+xml" /><item>
-    <title>在Windows安裝CUDA和cuDNN</title>
-    <link>https://unimimic.github.io/posts/install-cuda-cudnn-win10/</link>
-    <pubDate>Thu, 29 Sep 2022 00:00:00 &#43;0000</pubDate>
-    <author>Bunny Lee</author>
-    <guid>https://unimimic.github.io/posts/install-cuda-cudnn-win10/</guid>
-    <description><![CDATA[展示如何安裝CUDA和cuDNN]]></description>
-</item>
-</channel>
-</rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>免費 - Tag - IT Bunny Lee</title><link>https://unimimic.github.io/tags/%E5%85%8D%E8%B2%BB/</link><description>免費 - Tag - IT Bunny Lee</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 29 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://unimimic.github.io/tags/%E5%85%8D%E8%B2%BB/" rel="self" type="application/rss+xml"/><item><title>在Windows安裝CUDA和cuDNN</title><link>https://unimimic.github.io/posts/install-cuda-cudnn-win10/</link><pubDate>Thu, 29 Sep 2022 00:00:00 +0000</pubDate><author>Bunny Lee</author><guid>https://unimimic.github.io/posts/install-cuda-cudnn-win10/</guid><description>展示如何安裝CUDA和cuDNN</description></item></channel></rss>
