@@ -1,0 +1,194 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><title>使用 Arduino 改寫卡片 UID - IT Bunny Lee</title><meta name=Description content="展示使用 Arduino 改寫卡片 UID"><meta property="og:title" content="使用 Arduino 改寫卡片 UID"><meta property="og:description" content="展示使用 Arduino 改寫卡片 UID"><meta property="og:type" content="article"><meta property="og:url" content="https://unimimic.github.io/posts/arduino-uid/"><meta property="og:image" content="https://unimimic.github.io/logo.png"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-06-15T00:00:00+00:00"><meta property="article:modified_time" content="2023-07-04T21:31:35+08:00"><meta property="og:site_name" content="IT 李小兔"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://unimimic.github.io/logo.png"><meta name=twitter:title content="使用 Arduino 改寫卡片 UID"><meta name=twitter:description content="展示使用 Arduino 改寫卡片 UID"><meta name=application-name content="My cool site"><meta name=apple-mobile-web-app-title content="My cool site"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://unimimic.github.io/posts/arduino-uid/><link rel=prev href=https://unimimic.github.io/posts/arduino-proximity-sensor/><link rel=stylesheet href=/css/style.min.css><link rel=preload href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css as=style onload='this.onload=null,this.rel="stylesheet"'><noscript><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css></noscript><link rel=preload href=https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css as=style onload='this.onload=null,this.rel="stylesheet"'><noscript><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css></noscript><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"使用 Arduino 改寫卡片 UID","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/unimimic.github.io\/posts\/arduino-uid\/"},"genre":"posts","keywords":"教學, Arduino, RFID","wordcount":526,"url":"https:\/\/unimimic.github.io\/posts\/arduino-uid\/","datePublished":"2023-06-15T00:00:00+00:00","dateModified":"2023-07-04T21:31:35+08:00","publisher":{"@type":"Organization","name":""},"author":{"@type":"Person","name":"Bunny Lee"},"description":"展示使用 Arduino 改寫卡片 UID"}</script></head><body data-header-desktop=fixed data-header-mobile=auto><script type=text/javascript>(window.localStorage&&localStorage.getItem("theme")?localStorage.getItem("theme")==="dark":"auto"==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:"auto"==="dark")&&document.body.setAttribute("theme","dark")</script><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><script async src="https://www.googletagmanager.com/gtag/js?id=G-YRQ273VWPD"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-YRQ273VWPD")</script><div class=header-wrapper><div class=header-title><a href=/ title="IT Bunny Lee"><span class=header-title-pre><i class='fa-solid fa-carrot' aria-hidden=true></i> </span>IT 李小兔</a></div><div class=menu><div class=menu-inner><a class=menu-item href=/posts/>文章 </a><a class=menu-item href=/tags/>標籤 </a><a class=menu-item href=/categories/>分類 </a><span class="menu-item delimiter"></span><a href=javascript:void(0); class="menu-item theme-switch" title="Switch Theme">
+<i class="fas fa-adjust fa-fw" aria-hidden=true></i></a></div></div></div></header><header class=mobile id=header-mobile><script async src="https://www.googletagmanager.com/gtag/js?id=G-YRQ273VWPD"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-YRQ273VWPD")</script><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title="IT Bunny Lee"><span class=header-title-pre><i class='fa-solid fa-carrot' aria-hidden=true></i> </span>IT 李小兔</a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><a class=menu-item href=/posts/ title>文章</a><a class=menu-item href=/tags/ title>標籤</a><a class=menu-item href=/categories/ title>分類</a><a href=javascript:void(0); class="menu-item theme-switch" title="Switch Theme">
+<i class="fas fa-adjust fa-fw" aria-hidden=true></i></a></div></div></header><main class=main><div class=container><div class=toc id=toc-auto><h2 class=toc-title>Contents</h2><div class="toc-content always-active" id=toc-content-auto></div></div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">使用 Arduino 改寫卡片 UID</h1><div class=post-meta><div class=post-meta-line><span class=post-author><a href=/ title=Author rel=author class=author><i class="fas fa-user-circle fa-fw" aria-hidden=true></i>Bunny Lee</a></span>&nbsp;<span class=post-category>included in <a href=/categories/%E6%8A%80%E8%A1%93%E7%AD%86%E8%A8%98/><i class="far fa-folder fa-fw" aria-hidden=true></i>技術筆記</a></span></div><div class=post-meta-line><i class="far fa-calendar-alt fa-fw" aria-hidden=true></i>&nbsp;<time datetime=2023-06-15>2023-06-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden=true></i>&nbsp;526 words&nbsp;
+<i class="far fa-clock fa-fw" aria-hidden=true></i>&nbsp;3 minutes&nbsp;</div></div><div class="details toc" id=toc-static data-kept><div class="details-summary toc-title"><span>Contents</span>
+<span><i class="details-icon fas fa-angle-right" aria-hidden=true></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><a href=#簡單說明>簡單說明</a></li><li><a href=#bom表>BOM表</a></li><li><a href=#接線實作>接線實作</a></li><li><a href=#程式實作>程式實作</a><ul><li><a href=#安裝函式庫><strong>安裝函式庫</strong></a></li><li><a href=#讀取uid><strong>讀取UID</strong></a></li><li><a href=#更改uid><strong>更改UID</strong></a></li></ul></li></ul></nav></div></div><div class=content id=content><h2 id=簡單說明>簡單說明</h2><ul><li>注意購買白卡時要注意使可以改UID的，一般購買套裝系列的白卡都是不能改UID。</li><li>以下示例僅做UID修改，不做其他sector修改。</li></ul><h2 id=bom表>BOM表</h2><ul><li>Arduino Uno</li><li>麵包板</li><li>RFID RC-522</li><li>7條杜邦線</li></ul><h2 id=接線實作>接線實作</h2><p><img class=lazyload src=/svg/loading.min.svg data-src=/posts/arduino-uid/images/0.png data-srcset="/posts/arduino-uid/images/0.png, /posts/arduino-uid/images/0.png 1.5x, /posts/arduino-uid/images/0.png 2x" data-sizes=auto alt=/posts/arduino-uid/images/0.png title="截圖 2023-03-13 下午7.19.43.png &amp;quot; &amp;ldquo;" width=545 height=712></p><h2 id=程式實作>程式實作</h2><h3 id=安裝函式庫><strong>安裝函式庫</strong></h3><p><strong><strong>Arduino IDE</strong></strong>程式管理員中直接下載MFRC522函式庫。</p><h3 id=讀取uid><strong>讀取UID</strong></h3><p>上傳完程式後，將卡片放到感應機上，從console介面中觀察卡片UID，並記錄起來。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-cpp data-lang=cpp><span class=line><span class=cl><span class=cp>#include</span> <span class=cpf>&lt;SPI.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp>#include</span> <span class=cpf>&lt;MFRC522.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp></span>
+</span></span><span class=line><span class=cl><span class=cp>#define RST_PIN         9          </span><span class=c1>// Configurable, see typical pin layout above
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=cp>#define SS_PIN          10         </span><span class=c1>// Configurable, see typical pin layout above
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=n>MFRC522</span> <span class=nf>mfrc522</span><span class=p>(</span><span class=n>SS_PIN</span><span class=p>,</span> <span class=n>RST_PIN</span><span class=p>);</span>  <span class=c1>// Create MFRC522 instance
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=kt>void</span> <span class=nf>setup</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>	<span class=n>Serial</span><span class=p>.</span><span class=n>begin</span><span class=p>(</span><span class=mi>9600</span><span class=p>);</span>		<span class=c1>// Initialize serial communications with the PC
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=k>while</span> <span class=p>(</span><span class=o>!</span><span class=n>Serial</span><span class=p>);</span>		<span class=c1>// Do nothing if no serial port is opened (added for Arduinos based on ATMEGA32U4)
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=n>SPI</span><span class=p>.</span><span class=n>begin</span><span class=p>();</span>			<span class=c1>// Init SPI bus
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=n>mfrc522</span><span class=p>.</span><span class=n>PCD_Init</span><span class=p>();</span>		<span class=c1>// Init MFRC522
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=n>delay</span><span class=p>(</span><span class=mi>4</span><span class=p>);</span>				<span class=c1>// Optional delay. Some board do need more time after init to be ready, see Readme
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=n>mfrc522</span><span class=p>.</span><span class=n>PCD_DumpVersionToSerial</span><span class=p>();</span>	<span class=c1>// Show details of PCD - MFRC522 Card Reader details
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=n>Serial</span><span class=p>.</span><span class=n>println</span><span class=p>(</span><span class=n>F</span><span class=p>(</span><span class=s>&#34;Scan PICC to see UID, SAK, type, and data blocks...&#34;</span><span class=p>));</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kt>void</span> <span class=nf>loop</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>	<span class=c1>// Reset the loop if no new card present on the sensor/reader. This saves the entire process when idle.
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=k>if</span> <span class=p>(</span> <span class=o>!</span> <span class=n>mfrc522</span><span class=p>.</span><span class=n>PICC_IsNewCardPresent</span><span class=p>())</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=k>return</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>	<span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=c1>// Select one of the cards
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=k>if</span> <span class=p>(</span> <span class=o>!</span> <span class=n>mfrc522</span><span class=p>.</span><span class=n>PICC_ReadCardSerial</span><span class=p>())</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=k>return</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>	<span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=c1>// Dump debug info about the card; PICC_HaltA() is automatically called
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=n>mfrc522</span><span class=p>.</span><span class=n>PICC_DumpToSerial</span><span class=p>(</span><span class=o>&amp;</span><span class=p>(</span><span class=n>mfrc522</span><span class=p>.</span><span class=n>uid</span><span class=p>));</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=更改uid><strong>更改UID</strong></h3><p>將記錄起來的UID填在這<code>#define NEW_UID {UID}</code>。上傳完程式後，將卡片放到感應機上，即可寫入UID。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span><span class=lnt>57
+</span><span class=lnt>58
+</span><span class=lnt>59
+</span><span class=lnt>60
+</span><span class=lnt>61
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-cpp data-lang=cpp><span class=line><span class=cl><span class=cp>#include</span> <span class=cpf>&lt;SPI.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp>#include</span> <span class=cpf>&lt;MFRC522.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp></span>
+</span></span><span class=line><span class=cl><span class=cp>#define RST_PIN   9     </span><span class=c1>// Configurable, see typical pin layout above
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=cp>#define SS_PIN    10    </span><span class=c1>// Configurable, see typical pin layout above
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=n>MFRC522</span> <span class=nf>mfrc522</span><span class=p>(</span><span class=n>SS_PIN</span><span class=p>,</span> <span class=n>RST_PIN</span><span class=p>);</span>   <span class=c1>// Create MFRC522 instance
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=cm>/* Set your new UID here! */</span>
+</span></span><span class=line><span class=cl><span class=cp>#define NEW_UID {0x32, 0xD3 , 0xD4, 0x6C}
+</span></span></span><span class=line><span class=cl><span class=cp></span>
+</span></span><span class=line><span class=cl><span class=n>MFRC522</span><span class=o>::</span><span class=n>MIFARE_Key</span> <span class=n>key</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=n>LED</span> <span class=o>=</span> <span class=mi>13</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kt>void</span> <span class=nf>setup</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=n>pinMode</span><span class=p>(</span><span class=n>LED</span><span class=p>,</span><span class=n>OUTPUT</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=n>Serial</span><span class=p>.</span><span class=n>begin</span><span class=p>(</span><span class=mi>9600</span><span class=p>);</span>  <span class=c1>// Initialize serial communications with the PC
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=k>while</span> <span class=p>(</span><span class=o>!</span><span class=n>Serial</span><span class=p>);</span>     <span class=c1>// Do nothing if no serial port is opened (added for Arduinos based on ATMEGA32U4)
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=n>SPI</span><span class=p>.</span><span class=n>begin</span><span class=p>();</span>         <span class=c1>// Init SPI bus
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=n>mfrc522</span><span class=p>.</span><span class=n>PCD_Init</span><span class=p>();</span>  <span class=c1>// Init MFRC522 card
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=n>Serial</span><span class=p>.</span><span class=n>println</span><span class=p>(</span><span class=n>F</span><span class=p>(</span><span class=s>&#34;Warning: this example overwrites the UID of your UID changeable card, use with care!&#34;</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>  <span class=c1>// Prepare key - all keys are set to FFFFFFFFFFFFh at chip delivery from the factory.
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=k>for</span> <span class=p>(</span><span class=n>byte</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=mi>6</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>key</span><span class=p>.</span><span class=n>keyByte</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>=</span> <span class=mh>0xFF</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kt>void</span> <span class=nf>loop</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>  <span class=c1>// Reset the loop if no new card present on the sensor/reader. This saves the entire process when idle. And if present, select one.
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=k>if</span> <span class=p>(</span> <span class=o>!</span> <span class=n>mfrc522</span><span class=p>.</span><span class=n>PICC_IsNewCardPresent</span><span class=p>()</span> <span class=o>||</span> <span class=o>!</span> <span class=n>mfrc522</span><span class=p>.</span><span class=n>PICC_ReadCardSerial</span><span class=p>()</span> <span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>delay</span><span class=p>(</span><span class=mi>50</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>  <span class=c1>// Dump UID
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=n>Serial</span><span class=p>.</span><span class=n>print</span><span class=p>(</span><span class=n>F</span><span class=p>(</span><span class=s>&#34;Card UID:&#34;</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>  <span class=k>for</span> <span class=p>(</span><span class=n>byte</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>mfrc522</span><span class=p>.</span><span class=n>uid</span><span class=p>.</span><span class=n>size</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>Serial</span><span class=p>.</span><span class=n>print</span><span class=p>(</span><span class=n>mfrc522</span><span class=p>.</span><span class=n>uid</span><span class=p>.</span><span class=n>uidByte</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>&lt;</span> <span class=mh>0x10</span> <span class=o>?</span> <span class=s>&#34; 0&#34;</span> <span class=o>:</span> <span class=s>&#34; &#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>Serial</span><span class=p>.</span><span class=n>print</span><span class=p>(</span><span class=n>mfrc522</span><span class=p>.</span><span class=n>uid</span><span class=p>.</span><span class=n>uidByte</span><span class=p>[</span><span class=n>i</span><span class=p>],</span> <span class=n>HEX</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span> 
+</span></span><span class=line><span class=cl>  <span class=n>Serial</span><span class=p>.</span><span class=n>println</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>// Set new UID
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=n>byte</span> <span class=n>newUid</span><span class=p>[]</span> <span class=o>=</span> <span class=n>NEW_UID</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=k>if</span> <span class=p>(</span> <span class=n>mfrc522</span><span class=p>.</span><span class=n>MIFARE_SetUid</span><span class=p>(</span><span class=n>newUid</span><span class=p>,</span> <span class=p>(</span><span class=n>byte</span><span class=p>)</span><span class=mi>4</span><span class=p>,</span> <span class=nb>true</span><span class=p>)</span> <span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>Serial</span><span class=p>.</span><span class=n>println</span><span class=p>(</span><span class=n>F</span><span class=p>(</span><span class=s>&#34;Wrote new UID to card.&#34;</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>    <span class=n>digitalWrite</span><span class=p>(</span><span class=n>LED</span><span class=p>,</span><span class=n>HIGH</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>delay</span><span class=p>(</span><span class=mi>1000</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>  <span class=c1>// Halt PICC and re-select it so DumpToSerial doesn&#39;t get confused
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=n>mfrc522</span><span class=p>.</span><span class=n>PICC_HaltA</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>  <span class=k>if</span> <span class=p>(</span> <span class=o>!</span> <span class=n>mfrc522</span><span class=p>.</span><span class=n>PICC_IsNewCardPresent</span><span class=p>()</span> <span class=o>||</span> <span class=o>!</span> <span class=n>mfrc522</span><span class=p>.</span><span class=n>PICC_ReadCardSerial</span><span class=p>()</span> <span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>  <span class=n>delay</span><span class=p>(</span><span class=mi>1000</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>Updated on 2023-07-04</span></div></div><div class=post-info-line><div class=post-info-md></div><div class=post-info-share><span><a href=javascript:void(0); title="Share on Twitter" data-sharer=twitter data-url=https://unimimic.github.io/posts/arduino-uid/ data-title="使用 Arduino 改寫卡片 UID" data-hashtags=教學,Arduino,RFID><i class="fab fa-twitter fa-fw" aria-hidden=true></i></a><a href=javascript:void(0); title="Share on Facebook" data-sharer=facebook data-url=https://unimimic.github.io/posts/arduino-uid/ data-hashtag=教學><i class="fab fa-facebook-square fa-fw" aria-hidden=true></i></a><a href=javascript:void(0); title="Share on Line" data-sharer=line data-url=https://unimimic.github.io/posts/arduino-uid/ data-title="使用 Arduino 改寫卡片 UID"><i data-svg-src=https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg aria-hidden=true></i></a><a href=javascript:void(0); title="Share on 微博" data-sharer=weibo data-url=https://unimimic.github.io/posts/arduino-uid/ data-title="使用 Arduino 改寫卡片 UID"><i class="fab fa-weibo fa-fw" aria-hidden=true></i></a><a href=javascript:void(0); title="Share on Blogger" data-sharer=blogger data-url=https://unimimic.github.io/posts/arduino-uid/ data-title="使用 Arduino 改寫卡片 UID" data-description="展示使用 Arduino 改寫卡片 UID"><i class="fab fa-blogger fa-fw" aria-hidden=true></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fas fa-tags fa-fw" aria-hidden=true></i>&nbsp;<a href=/tags/%E6%95%99%E5%AD%B8/>教學</a>,&nbsp;<a href=/tags/arduino/>Arduino</a>,&nbsp;<a href=/tags/rfid/>RFID</a></section><section><span><a href=javascript:void(0); onclick=window.history.back()>Back</a></span>&nbsp;|&nbsp;<span><a href=/>Home</a></span></section></div><div class=post-nav><a href=/posts/arduino-proximity-sensor/ class=prev rel=prev title="NPN型近接開關接線方式與 Arduino 的應用"><i class="fas fa-angle-left fa-fw" aria-hidden=true></i>NPN型近接開關接線方式與 Arduino 的應用</a></div></div></article></div></main><footer class=footer><div class=footer-container><div class=footer-line itemscope itemtype=http://schema.org/CreativeWork><i class="far fa-copyright fa-fw" aria-hidden=true></i><span itemprop=copyrightYear>2022 - 2023</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=/ target=_blank>Bunny Lee</a></span>&nbsp;|&nbsp;<span class=license><a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span></div></div></footer></div><div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title="Back to Top"><i class="fas fa-arrow-up fa-fw" aria-hidden=true></i>
+</a><a href=# id=view-comments class=fixed-button title="View Comments"><i class="fas fa-comment fa-fw" aria-hidden=true></i></a></div><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js></script><script type=text/javascript>window.config={code:{copyTitle:"Copy to clipboard",maxShownLines:50},comment:{},math:{delimiters:[{display:!0,left:"$$",right:"$$"},{display:!0,left:"\\[",right:"\\]"},{display:!0,left:"\\begin{equation}",right:"\\end{equation}"},{display:!0,left:"\\begin{equation*}",right:"\\end{equation*}"},{display:!0,left:"\\begin{align}",right:"\\end{align}"},{display:!0,left:"\\begin{align*}",right:"\\end{align*}"},{display:!0,left:"\\begin{alignat}",right:"\\end{alignat}"},{display:!0,left:"\\begin{alignat*}",right:"\\end{alignat*}"},{display:!0,left:"\\begin{gather}",right:"\\end{gather}"},{display:!0,left:"\\begin{CD}",right:"\\end{CD}"},{display:!1,left:"$",right:"$"},{display:!1,left:"\\(",right:"\\)"}],strict:!1}}</script><script type=text/javascript src=/js/theme.min.js></script></body></html>
